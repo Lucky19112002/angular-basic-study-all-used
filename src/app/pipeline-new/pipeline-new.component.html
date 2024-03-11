@@ -1,0 +1,49 @@
+<p>pipeline-new works!</p>
+
+<h2>Types of Pipe</h2>
+<div style="margin-left: 20px">
+  <p>Original String: {{ originalString }}</p>
+  <p>Uppercase: {{ originalString | uppercase }}</p>
+  <p>Lowercase: {{ originalString | lowercase }}</p>
+  <p>Titlecase: {{ originalString | titlecase }}</p>
+  <p>Current Date: {{ currentDate | date }}</p>
+  <p>Price: {{ price | currency }}</p>
+  <p>Number: {{ number | number : "1.2-3" }}</p>
+  <p>Percentage: {{ percentage | percent }}</p>
+  <p>Object to JSON: {{ object | json }}</p>
+</div>
+
+<h2>Parameterized Pipe</h2>
+<div style="margin-left: 20px">
+  <p>Original String: {{ originalString }}</p>
+  <p>Slice (start: 0, end: 5): {{ originalString | slice : 0 : 5 }}</p>
+  <p>Key-Value pairs: {{ object | keyvalue }}</p>
+  <p>Formatted Number: {{ number | number : "1.2-3" }}</p>
+</div>
+
+<h2>Custom Pipe</h2>
+<div style="margin-left: 20px">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Products" />
+  <ul>
+    <li *ngFor="let product of products | filterProducts : searchTerm">
+      {{ product.name }}
+    </li>
+  </ul>
+</div>
+
+<h2>Custom Pipe using API data</h2>
+<div style="margin-left: 20px">
+  <input
+    type="text"
+    [(ngModel)]="searchTermapi"
+    placeholder="Search Products"
+  />
+  <ul>
+    <li *ngFor="let product of productsapi | filterProducts : searchTerm">
+      {{ product.name }}
+    </li>
+  </ul>
+</div>
+<div>
+  <button (click)="nextPage()">Decorator</button>
+</div>

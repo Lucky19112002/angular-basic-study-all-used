@@ -1,0 +1,24 @@
+
+.day {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.night {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.admin {
+  background-color: lightblue;
+  color: blue;
+  font-weight: bold;
+}
+
+
+.user {
+  background-color: lightgreen;
+  color: green;
+  font-style: italic;
+}

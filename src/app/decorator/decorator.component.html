@@ -1,0 +1,28 @@
+<p>Decorator works!</p>
+
+<h2>@input and @output example</h2>
+<div style="margin-left: 20px">
+  <app-parent></app-parent>
+</div>
+
+<h2>@Injectable & Service & Providers</h2>
+<div style="margin-left: 20px">
+  <h3>Users:</h3>
+  <ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+  </ul>
+</div>
+
+<h2>@HostBinding and @HostListener</h2>
+<div style="margin-left: 20px">
+  <div
+    class="box"
+    [style.backgroundColor]="backgroundColor"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  ></div>
+</div>
+
+<div>
+  <button type="button" (click)="clickFunction()">pipeline</button>
+</div>

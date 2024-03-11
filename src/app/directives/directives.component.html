@@ -1,0 +1,39 @@
+<p>Directives works!</p>
+
+<h2>Structural Directives</h2>
+<div style="margin-left: 20px">
+  <h3>*ngIf Directive Example</h3>
+  <div *ngIf="showElement">
+    This element is shown conditionally using ngIf directive.
+  </div>
+
+  <h3>*ngFor Directive Example</h3>
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item }}
+    </li>
+  </ul>
+
+  <h3>*ngSwitch Directive Example</h3>
+  <div [ngSwitch]="mode" (click)="toggleMode()">
+    <div *ngSwitchCase="'day'">Switch to Night Mode</div>
+    <div *ngSwitchCase="'night'">Switch to Day Mode</div>
+  </div>
+</div>
+
+<h2>Attribute Directives</h2>
+<div style="margin-left: 20px">
+  <h3>ngStyle Directive Example</h3>
+  <div [ngStyle]="{ 'background-color': bgColor, color: textColor }">
+    This text has custom styles applied using ngStyle.
+  </div>
+
+  <h3>ngClass Directive Example</h3>
+  <div [ngClass]="{ admin: !isAdmin, user: isAdmin }">
+    This text has custom classes applied using ngClass.
+  </div>
+</div>
+
+<div>
+  <button (click)="nextPage()">Decorator</button>
+</div>
